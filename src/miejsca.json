@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Zegadłowicza, Warszawa",
+    "type": "Home",
+    "latitude": 52.229157,
+    "longitude": 20.970461
+  },
+  {
+    "name": "Skarżysko-Kamienna",
+    "type": "Start",
+    "latitude": 51.114315,
+    "longitude": 20.865804
+  },
+  {
+    "name": "Kielce",
+    "type": "Nocleg",
+    "latitude": 50.866077,
+    "longitude": 20.628568
+  },
+  {
+    "name": "Chęciny",
+    "type": "Zamek",
+    "latitude": 50.805449,
+    "longitude": 20.478122
+  },
+  {
+    "name": "Szydłów",
+    "type": "Zamek",
+    "latitude": 50.591103,
+    "longitude": 21.007341
+  },
+  {
+    "name": "Ujazd",
+    "type": "Town",
+    "latitude": 50.713025,
+    "longitude": 21.310445
+  },
+  {
+    "name": "Sandomierz",
+    "type": "Town",
+    "latitude": 50.682240,
+    "longitude": 21.750178
+  },
+  {
+    "name": "Kazimierz Dolny",
+    "type": "Zamek",
+    "latitude": 51.318041,
+    "longitude": 21.954248
+  },
+  {
+    "name": "Bąkowiec",
+    "type": "Town",
+    "latitude": 51.505005,
+    "longitude": 21.715990
+  }
+
+]
