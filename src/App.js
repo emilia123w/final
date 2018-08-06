@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import './style.css';
-import ReactDOM from 'react-dom';
+
 
 import Map from './Map.js';
 
