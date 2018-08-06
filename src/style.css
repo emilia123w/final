@@ -9,8 +9,10 @@ h2 {
   color:#252e3d;
 
 }
-
-.navBar {
+.burgerMenu{
+  visibility:hidden;
+}
+#navBar {
   background-color: #0a0621;
   font-weight: bold;
   color: #d13ef2;
@@ -35,5 +37,25 @@ ul li:hover{
 .searching {
   border:solid;
   border-radius: 5px;
+
+}
+@media only screen and (max-width: 600px) {
+    #navBar {
+        visibility:hidden;
+    }
+    .burgerMenu{
+      visibility:visible;
+      font-weight: bold;
+      color:#0a0621;
+      border:solid;
+      border-radius:5px;
+      width:50px;
+      background-color:#d13ef2;
+    }
+    .burgerMenu:hover{
+      cursor:pointer;
+
+    }
+
 
 }
