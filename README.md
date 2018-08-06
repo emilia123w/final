@@ -17,4 +17,8 @@ This is in the developer mode, so to start you have to run dependencies by npm i
 
 ## code used
 
-It is made in JS with react, using Google API key and some css
+- html
+- css
+- JS with react
+- Google API key
+- foresquare API
