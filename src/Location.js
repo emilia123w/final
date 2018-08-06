@@ -1,9 +1,8 @@
 import React from "react";
 
 class Location extends React.Component {
-  /**
-   * Render function of Place
-   */
+
+
   render() {
     return (
       <li
