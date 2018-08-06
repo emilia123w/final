@@ -28,6 +28,7 @@ class App extends Component {
       Menu
       </div>
       <h2>ŚWIĘTOKRZYSKIE TRIP</h2>
+      <h4>with google maps and foresquare</h4>
       <Map/>
 
       </div>
