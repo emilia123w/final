@@ -9,6 +9,14 @@ h2 {
   color:#252e3d;
 
 }
+h4 {
+  text-align: center;
+  letter-spacing: 2px;
+  color: #d13ef2;
+  font-style: italic;
+  margin-left: 40px;
+  margin-top: -20px;
+}
 .burgerMenu{
   visibility:hidden;
 }
