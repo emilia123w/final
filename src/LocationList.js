@@ -2,9 +2,7 @@ import React, { Component } from "react";
 import Location from "./Location";
 
 class LocationList extends Component {
-  /**
-   * Constructor
-   */
+
   constructor(props) {
     super(props);
     this.state = {
@@ -16,9 +14,7 @@ class LocationList extends Component {
     this.filterLocations = this.filterLocations.bind(this);
   }
 
-  /**
-   * Filter Locations based on user query
-   */
+
   filterLocations(event) {
     this.props.closeInfoWindow();
     const { value } = event.target;
@@ -44,9 +40,7 @@ class LocationList extends Component {
     });
   }
 
-  /**
-   * Render function of LocationList
-   */
+
   render() {
     var locationlist = this.state.locations.map(function(listItem, index) {
       return (
@@ -59,7 +53,7 @@ class LocationList extends Component {
     }, this);
 
     return (
-      <div className="navBar">
+      <div id="navBar">
       <div className="searching">
         <input
           role="search"
