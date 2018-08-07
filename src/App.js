@@ -5,8 +5,9 @@ import './style.css';
 
 import Map from './Map.js';
 
-
-
+/**
+*  opens navbar when is hidden (on small screens):
+*/
 
 class App extends Component {
   openMenu=function(){
@@ -28,10 +29,10 @@ class App extends Component {
       Menu
       </div>
       <h2>ŚWIĘTOKRZYSKIE TRIP</h2>
-      <h4>with google maps and foresquare</h4>
+      <h4>with google maps and foursquare</h4>
       <Map/>
       <footer className="footer">
-      Api from: FORESQUARE
+      Api from: FOURSQUARE
       </footer>
       </div>
 
