@@ -2,6 +2,9 @@ import React from "react";
 
 class Location extends React.Component {
 
+  /**
+  *  infoWindow shows when location  is clicked
+  */
 
   render() {
     return (
