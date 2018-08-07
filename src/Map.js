@@ -127,11 +127,10 @@ componentDidMount() {
         response.json().then(function (data) {
                                var location_data = data.response.venues[0];
                                var verified = '<b>Verified Location: </b>' + (location_data.verified ? 'Yes' : 'No') + '<br>';
-                               var checkinsCount = '<b>CheckIn: </b>' + location_data.stats.checkinsCount + '<br>';
-                               var usersCount = '<b>Users: </b>' + location_data.stats.usersCount + '<br>';
-                               var tipCount = '<b>Tips: </b>' + location_data.stats.tipCount + '<br>';
+                               var address = '<b>Address: </b>' + location_data.location.address + '<br>';
+                               var place = '<b>Place: </b>' + location_data.name + '<br>';
                                var readMore = '<a href="https://foursquare.com/v/'+ location_data.id +'" target="_blank">Read More on Foursquare Website</a>'
-                               self.state.infowindow.setContent(checkinsCount + usersCount + tipCount + verified + readMore);
+                               self.state.infowindow.setContent(place + address   + verified + readMore);
                            });
                   }
               )
