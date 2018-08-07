@@ -14,8 +14,8 @@
   {
     "name": "Kielce",
     "type": "Nocleg",
-    "latitude": 50.866077,
-    "longitude": 20.628568
+    "latitude": 50.911912,
+    "longitude": 20.693730
   },
   {
     "name": "Chęciny",
@@ -31,13 +31,13 @@
   },
   {
     "name": "Ujazd",
-    "type": "Town",
+    "type": "Zwiedzanie",
     "latitude": 50.713025,
     "longitude": 21.310445
   },
   {
     "name": "Sandomierz",
-    "type": "Town",
+    "type": "Zwiedzanie",
     "latitude": 50.682240,
     "longitude": 21.750178
   },
@@ -49,7 +49,7 @@
   },
   {
     "name": "Bąkowiec",
-    "type": "Town",
+    "type": "Zwiedzanie",
     "latitude": 51.505005,
     "longitude": 21.715990
   }
