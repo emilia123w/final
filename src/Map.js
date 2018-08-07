@@ -19,12 +19,16 @@ constructor(props){
 }
 
 componentDidMount() {
-
+  /**
+  *  loads map using google api key:
+  */
         window.initMap = this.initMap;
 
         loadMap('https://maps.googleapis.com/maps/api/js?key=AIzaSyCG28KPn4R6JOIXEgxygKcI9itTNQUIY9M&v=3&callback=initMap')
     }
-
+    /**
+    *  init map function and adding style to the map:
+    */
     initMap(){
       var styles=[
         {featureType: 'water',
@@ -46,6 +50,10 @@ componentDidMount() {
    styles:styles,
    mapTypeControl: false});
 
+   /**
+   *  creates infowindow:
+   */
+
    var InfoWindow = new window.google.maps.InfoWindow({});
 
    window.google.maps.event.addListener(InfoWindow, "closeclick", function() {
@@ -66,7 +74,10 @@ componentDidMount() {
     window.google.maps.event.addListener(map, "click", function() {
       self.closeInfoWindow();
     });
-
+/**
+*  sets markers on positions
+*  and shows infowindow  on marker click:
+*/
     var alllocations = [];
     this.state.alllocations.forEach(function(location) {
       var longname = location.name + " - " + location.type;
@@ -78,6 +89,7 @@ componentDidMount() {
         animation: window.google.maps.Animation.DROP,
         map: map
       });
+
       marker.addListener("click", function() {
        self.openInfoWindow(marker);
      });
@@ -108,8 +120,8 @@ componentDidMount() {
   getMarkerInfo(marker) {
      var self = this;
 
-     // Add the api keys for yelp
-     var clientId = 'EYLWMPA4BKMJ20A4C5OD5UOQW1X0XQJKQJ1F4JC01EL0JOAG'
+     // Add the api keys for foursquare:
+     var clientId = 'EYLWMPA4BKMJ20A4C5OD5UOQW1X0XQJKQJ1F4JC01EL0JOAG';
      var clientSecret = "QLOVEWHGZ0CH3RU3BV21HGKQLONYMLTE2LURXOU3X30HUML4";
      var url =
       "https://api.foursquare.com/v2/venues/search?client_id="
@@ -118,6 +130,10 @@ componentDidMount() {
        + marker.getPosition().lat()
         + "," + marker.getPosition().lng()
         + "&limit=1";
+
+/**
+*  sets content of infoWindow using data from foursquare:
+*/
     fetch(url)
       .then(function(response) {
         if (response.status !== 200) {
@@ -129,8 +145,9 @@ componentDidMount() {
                                var verified = '<b>Verified Location: </b>' + (location_data.verified ? 'Yes' : 'No') + '<br>';
                                var address = '<b>Address: </b>' + location_data.location.address + '<br>';
                                var place = '<b>Place: </b>' + location_data.name + '<br>';
+                               var description = '<b>Description: </b>' + location_data.description + '<br>';
                                var readMore = '<a href="https://foursquare.com/v/'+ location_data.id +'" target="_blank">Read More on Foursquare Website</a>'
-                               self.state.infowindow.setContent(place + address   + verified + readMore);
+                               self.state.infowindow.setContent('<div tabindex="0">' + place + address + verified + readMore + '</div>');
                            });
                   }
               )
@@ -171,6 +188,10 @@ closeInfoWindow() {
          )
        }
 }
+
+/**
+* function that loads the map:
+*/
 
 function loadMap(src) {
     var ref = window.document.getElementsByTagName("script")[0];
