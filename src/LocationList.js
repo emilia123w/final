@@ -13,7 +13,9 @@ class LocationList extends Component {
 
     this.filterLocations = this.filterLocations.bind(this);
   }
-
+  /**
+  *  adds marker to the location
+  */
 
   filterLocations(event) {
     this.props.closeInfoWindow();
@@ -51,6 +53,11 @@ class LocationList extends Component {
         />
       );
     }, this);
+
+    /**
+    *  shows filter window and list:
+    */
+
 
     return (
       <div id="navBar">
